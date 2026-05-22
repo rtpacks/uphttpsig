@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uphttpsig"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python 3.11 compatible replacement for the legacy httpsig package"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -29,6 +29,7 @@ classifiers = [
 ]
 dependencies = [
     "cryptography>=3.4",
+    "requests>=2",
 ]
 
 [project.urls]
@@ -37,10 +38,7 @@ Repository = "https://github.com/rtpacks/uphttpsig"
 Issues = "https://github.com/rtpacks/uphttpsig/issues"
 
 [project.optional-dependencies]
-requests = ["requests>=2"]
-test = [
-    "requests>=2",
-]
+test = []
 
 [tool.setuptools]
 packages = ["uphttpsig"]
